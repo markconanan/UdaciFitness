@@ -3,6 +3,13 @@ import { View } from 'react-native'
 import { FontAwesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
 import { blue, white } from './colors'
 
+export function getDailyReminderValue() {
+  return {
+    today: "👋 Don't forget to log your data today!"
+  }
+}
+
+
 export function getMetricMetaInfo(metric) {
   const info = {
     run: {
@@ -143,3 +150,4 @@ export function timeToString(time = Date.now()) {
   const todayUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
   return todayUTC.toISOString().split('T')[0]
 }
+
